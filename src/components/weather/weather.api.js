@@ -4,9 +4,7 @@
  */
 class WeatherForecastClient {
   constructor(location) {
-    this.appId = "50a34e070dd5c09a99554b57ab7ea7e2";
-    this.url = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURI(location)}&units=metric&appid=${this.appId
-      }`;
+    this.url = `https://wttr.in/${encodeURI(location)}?format=j1`;
   }
 
   /**
@@ -19,14 +17,14 @@ class WeatherForecastClient {
       .then((json) => JSON.stringify(json))
       .then((json) => JSON.parse(json))
       .then((data) => {
-        const temperature = Math.round(data.main.temp);
-        const condition = data.weather[0].main.toLowerCase();
+        const temperature = Math.round(data.current_condition[0].temp_C);
+        const condition = data.current_condition[0].weatherCode;
 
         return {
           temperature,
           condition,
         };
       })
-      .catch((err) => console.warn("Weather API returned an error:", err));
+      .catch((err) => console.warn("wttr.in returned an error:", err));
   }
 }

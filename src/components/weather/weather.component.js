@@ -7,23 +7,54 @@ class Weather extends Component {
 
   forecasts = [
     {
-      conditions: ["clouds", "mist", "haze", "smoke"],
+      conditions: ["119", "122", "143", "248", "260"],
       icon: "cloud_queue",
       color: "cloudy",
     },
     {
-      conditions: ["drizzle", "snow", "rain"],
+      conditions: ["176",
+        "179",
+        "182",
+        "185",
+        "263",
+        "266",
+        "281",
+        "284",
+        "293",
+        "296",
+        "299",
+        "302",
+        "305",
+        "308",
+        "311",
+        "314",
+        "317",
+        "350",
+        "353",
+        "356",
+        "359",
+        "362",
+        "365",
+        "368",
+        "392",
+        "227", "230", "320", "323", "326", "374", "377", "386", "389"
+      ],
       icon: "opacity",
       color: "cloudy",
     },
     {
-      conditions: ["clear"],
+      conditions: ["113"],
       icon: "wb_sunny",
       color: "sunny",
     },
     {
-      conditions: ["thunderstorm"],
+      conditions: ["200"],
       icon: "bolt",
+      color: "cloudy",
+    },
+    {
+      conditions: ["329", "332", "335", "338", "371", "395"],
+      icon: "ac_unit",
       color: "cloudy",
     },
   ];
@@ -108,7 +139,7 @@ class Weather extends Component {
         <p class="+ weather-temperature">
             <span class="weather-icon" class="+"><i class="material-icons weather-condition-icon sunny">wb_sunny</i></span>
             <span class="weather-temperature-location">${this.location}</span>
-            <span class="weather-temperature-value">1</span>
+            <span class="weather-temperature-value">?</span>
             º<span class="weather-temperature-scale">${this.temperatureScale}</span>
         </p>`;
   }
