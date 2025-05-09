@@ -44,6 +44,24 @@ const default_configuration = {
               icon: "brand-ycombinator",
               icon_color: palette.peach,
             },
+            {
+              name: "reddit",
+              url: "https://www.reddit.com",
+              icon: "brand-reddit",
+              icon_color: palette.red,
+            },
+            {
+              name: "x",
+              url: "https://x.com",
+              icon: "brand-x",
+              icon_color: palette.blue,
+            },
+            {
+              name: "facebook",
+              url: "https://www.facebook.com",
+              icon: "brand-facebook",
+              icon_color: palette.mauve,
+            },
           ],
         },
         {
@@ -56,16 +74,28 @@ const default_configuration = {
               icon_color: palette.green,
             },
             {
-              name: "calendar",
-              url: "https://calendar.google.com",
-              icon: "calendar-filled",
+              name: "gmail - family",
+              url: "https://mail.google.com/mail/u/1",
+              icon: "brand-gmail",
               icon_color: palette.peach,
+            },
+            {
+              name: "calendar",
+              url: "https://calendar.google.com/calendar/u/1/r",
+              icon: "calendar-filled",
+              icon_color: palette.red,
             },
             {
               name: "drive",
               url: "https://drive.google.com/drive/home",
               icon: "brand-google-drive",
               icon_color: palette.blue,
+            },
+            {
+              name: "drive - family",
+              url: "https://drive.google.com/drive/u/1/home",
+              icon: "brand-google-drive",
+              icon_color: palette.lavender,
             },
           ],
         },
@@ -98,6 +128,70 @@ const default_configuration = {
             },
           ],
         },
+        {
+          name: "media",
+          links: [
+            {
+              name: "youtube",
+              url: "https://www.youtube.com",
+              icon: "brand-youtube",
+              icon_color: palette.green,
+            },
+            {
+              name: "twitch",
+              url: "https://www.twitch.com",
+              icon: "brand-twitch",
+              icon_color: palette.peach,
+            },
+            {
+              name: "spotify",
+              url: "https://open.spotify.com",
+              icon: "brand-spotify",
+              icon_color: palette.red,
+            },
+            {
+              name: "youtube-music",
+              url: "https://music.twitch.com",
+              icon: "brand-youtube",
+              icon_color: palette.blue,
+            },
+          ]
+        },
+        {
+          name: "gaming",
+          links: [
+            {
+              name: "steam",
+              url: "https://store.steampowered.com",
+              icon: "brand-steam",
+              icon_color: palette.green,
+            },
+            {
+              name: "gog",
+              url: "https://www.gog.com",
+              icon: "brand-appgallery",
+              icon_color: palette.peach,
+            },
+            {
+              name: "nexus mods",
+              url: "https://www.nexusmods.com",
+              icon: "hexagons",
+              icon_color: palette.red,
+            },
+            {
+              name: "steamdb",
+              url: "https://steamdb.info",
+              icon: "database-search",
+              icon_color: palette.blue,
+            },
+            {
+              name: "HowLongToBeat",
+              url: "https://store.howlongtobeat.com",
+              icon: "books",
+              icon_color: palette.mauve,
+            },
+          ],
+        },
       ],
     },
     {
@@ -105,11 +199,11 @@ const default_configuration = {
       background_url: "src/img/work.gif",
       categories: [
         {
-          name: "bookmarks",
+          name: "workspace",
           links: [
             {
               name: "github",
-              url: "https://github.com",
+              url: "https://github.com/oncoursesystems",
               icon: "brand-github",
               icon_color: palette.green,
             },
@@ -124,11 +218,34 @@ const default_configuration = {
               url: "https://wrike.com",
               icon: "check",
               icon_color: palette.red,
+            }
+          ]
+        },
+        {
+          name: "utils",
+          links: [
+            {
+              name: "azure devops",
+              url: "https://dev.azure.com/oncoursesystems",
+              icon: "brand-azure",
+              icon_color: palette.green,
+            },
+            {
+              name: "sentry",
+              url: "https://oncourse-systems-for-education.sentry.io",
+              icon: "brand-sentry",
+              icon_color: palette.peach,
+            },
+            {
+              name: "cloudflare",
+              url: "https://dash.cloudflare.com",
+              icon: "brand-cloudflare",
+              icon_color: palette.red,
             },
           ],
         },
         {
-          name: "apps",
+          name: "websites",
           links: [
             {
               name: "ocs",
@@ -137,102 +254,132 @@ const default_configuration = {
               icon_color: palette.green,
             },
             {
-              name: "ocs-stg",
-              url: "https://staging.oncoursesystems.com",
-              icon: "school",
-              icon_color: palette.peach,
-            },
-            {
-              name: "ocs-dev",
-              url: "https://devel.oncoursesystems.com",
-              icon: "school",
-              icon_color: palette.red,
-            },
-            {
               name: "occ",
               url: "https://www.oncourseconnect.com",
               icon: "cloud",
-              icon_color: palette.blue,
+              icon_color: palette.peach,
             },
             {
-              name: "occ-stg",
-              url: "https://staging.oncourseconnect.com",
-              icon: "cloud",
-              icon_color: palette.blue,
+              name: "intranet",
+              url: "https://intranet.oncoursesystems.com",
+              icon: "school",
+              icon_color: palette.red,
             },
             {
-              name: "occ-dev",
-              url: "https://devel.oncourseconnect.com",
-              icon: "cloud",
+              name: "devops",
+              url: "https://devops.oncoursesystems.com",
+              icon: "brand-terraform",
               icon_color: palette.blue,
             },
           ],
         },
       ],
     },
+    // {
+    //   name: "homelab",
+    //   background_url: "src/img/chill.gif",
+    //   categories: [
+    //     {
+    //       name: "gaming",
+    //       links: [
+    //         {
+    //           name: "nintendo",
+    //           url: "https://store.nintendo.co.uk",
+    //           icon: "device-nintendo",
+    //           icon_color: palette.peach,
+    //         },
+    //       ],
+    //     },
+    //   ],
+    // },
     {
-      name: "chi ll",
+      name: "misc",
       background_url: "src/img/chill.gif",
       categories: [
         {
-          name: "social media",
+          name: "dev",
           links: [
             {
-              name: "x",
-              url: "https://x.com",
-              icon: "brand-x",
+              name: "dotfyle",
+              url: "https://dotfyle.com",
+              icon: "puzzle",
               icon_color: palette.green,
             },
             {
-              name: "facebook",
-              url: "https://www.facebook.com",
-              icon: "brand-facebook",
+              name: "it-tools",
+              url: "https://it-tools.tech",
+              icon: "tools",
               icon_color: palette.peach,
             },
             {
-              name: "reddit",
-              url: "https://www.reddit.com",
-              icon: "brand-reddit",
+              name: "regex101",
+              url: "https://regex101.com/",
+              icon: "regex",
+              icon_color: palette.red,
+            },
+            {
+              name: "devdocs",
+              url: "https://devdocs.io/",
+              icon: "books",
+              icon_color: palette.blue,
+            },
+            {
+              name: "cheatsheets",
+              url: "https://cheatsheets.zip/",
+              icon: "file-spreadsheet",
+              icon_color: palette.mauve,
+            },
+          ],
+        },
+        {
+          name: "ai",
+          links: [
+            {
+              name: "chatgpt",
+              url: "https://chatgpt.com",
+              icon: "brand-openai",
+              icon_color: palette.green,
+            },
+            {
+              name: "claude",
+              url: "https://claude.ai",
+              icon: "brand-openai",
+              icon_color: palette.peach,
+            },
+            {
+              name: "gemini",
+              url: "https://gemini.google.com",
+              icon: "brand-google",
               icon_color: palette.red,
             },
           ],
         },
         {
-          name: "gaming",
+          name: "high seas",
           links: [
             {
-              name: "steam",
-              url: "https://store.steampowered.com",
-              icon: "brand-steam",
+              name: "fmhy",
+              url: "https://fmhy.net",
+              icon: "barrier-block",
               icon_color: palette.green,
             },
             {
-              name: "nintendo",
-              url: "https://store.nintendo.co.uk",
-              icon: "device-nintendo",
+              name: "megathread",
+              url: "https://rentry.org/megathread",
+              icon: "skull",
               icon_color: palette.peach,
             },
-          ],
-        },
-        {
-          name: "video",
-          links: [
             {
-              name: "youtube",
-              url: "https://www.youtube.com",
-              icon: "brand-youtube",
-              icon_color: palette.green,
-            },
-            {
-              name: "twitch",
-              url: "https://www.twitch.com",
-              icon: "brand-twitch",
-              icon_color: palette.peach,
+              name: "mobilism",
+              url: "https://forum.mobilism.me/",
+              icon: "device-mobile",
+              icon_color: palette.red,
             },
           ],
         },
       ],
     },
+
   ],
 };
 
