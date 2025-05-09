@@ -46,7 +46,7 @@ class Statusbar extends Component {
           height: 100%;
           position: relative;
           list-style: none;
-          margin-left: 1em;
+          margin-left: 5px;
       }
 
       #tabs ul li:not(:last-child)::after {
@@ -64,7 +64,8 @@ class Statusbar extends Component {
       #tabs ul li:not(:last-child) {
           width: 35px;
           text-align: center;
-          font: 700 13px 'Yu Gothic', serif;
+          font: 700 14px JetBrainsMono Nerd Font;
+          src: url(../fonts/jetbrains-mono.ttf);
           color: ${CONFIG.palette.text};
           padding: 6px 0;
           transition: all .1s;
@@ -74,6 +75,7 @@ class Statusbar extends Component {
       }
 
       #tabs ul li:not(:last-child):hover {
+          border-radius: 10px
           background: ${CONFIG.palette.surface0};
       }
 
@@ -145,6 +147,7 @@ class Statusbar extends Component {
 
       .widget:hover {
           cursor: pointer;
+          border-radius: 10px;
           background: rgba(255, 255, 255, .05);
       }
 
@@ -176,7 +179,7 @@ class Statusbar extends Component {
           background: ${CONFIG.palette.mantle};
           color: ${CONFIG.palette.green};
           cursor: pointer;
-          border-radius: 5px 15px 15px 5px;
+          border-radius: 10px;
       }
 
       .fastlink:hover {
@@ -184,7 +187,7 @@ class Statusbar extends Component {
       }
 
       .fastlink-icon {
-        width: 70%;
+        width: 50%;
       }
     `;
   }

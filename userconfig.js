@@ -22,8 +22,8 @@ const default_configuration = {
   },
   disabled: [],
   localIcons: false,
-  fastlink: "https://chat.openai.com",
-  openLastVisitedTab: true,
+  fastlink: "",
+  openLastVisitedTab: false,
   tabs: [
     {
       name: "home",
