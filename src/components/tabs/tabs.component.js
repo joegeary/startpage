@@ -3,12 +3,18 @@ class Links extends Component {
     super();
   }
 
-  static getIcon(link) {
-    const defaultColor = CONFIG.palette.base;
+  static getIcon(link, i) {
+    const colors = [
+      CONFIG.palette.green, CONFIG.palette.peach, CONFIG.palette.red,
+      CONFIG.palette.blue, CONFIG.palette.mauve, CONFIG.palette.sky,
+      CONFIG.palette.lavender, CONFIG.palette.flamingo, CONFIG.palette.pink
+    ];
+
+    const color = colors[i] ?? CONFIG.palette.base;
 
     return link.icon
       ? `<i class="ti ti-${link.icon} link-icon"
-            style="color: ${link.icon_color ?? defaultColor}"></i>`
+            style="color: ${link.icon_color ?? color}"></i>`
       : "";
   }
 
@@ -24,10 +30,10 @@ class Links extends Component {
               <div class="links-wrapper">
               ${links
               .map(
-                (link) => `
+                (link, i) => `
                   <div class="link-info">
                     <a href="${link.url}">
-                      ${Links.getIcon(link)}
+                      ${Links.getIcon(link, i)}
                       ${link.name ? `<p class="link-name">${link.name}</p>` : ""}
                     </a>
                 </div>`,
@@ -102,7 +108,7 @@ class Tabs extends Component {
       }
 
       #panels {
-          border-radius: 10px
+          border-radius: 10px;
           width: 90%;
           height: 75%;
           right: 0;
